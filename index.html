@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #ff3366;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: gray;
+      color: white;
+      position: absolute;
+    }
+
+    #photo {
+      display: none;
+      margin-top: 30px;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Will you be my Valentine? ❤️</h1>
+
+  <button id="yesBtn" onclick="showPhoto()">Yes</button>
+  <button id="noBtn" onmouseover="moveNo()">No</button>
+
+  <br>
+  <img id="photo" src="yourphoto.jpg" alt="Us ❤️">
+
+<script>
+  function showPhoto() {
+    document.getElementById("photo").style.display = "block";
+  }
+
+  function moveNo() {
+    let x = Math.floor(Math.random() * window.innerWidth);
+    let y = Math.floor(Math.random() * window.innerHeight);
+    document.getElementById("noBtn").style.left = x + "px";
+    document.getElementById("noBtn").style.top = y + "px";
+  }
+</script>
+
+</body>
+</html>
